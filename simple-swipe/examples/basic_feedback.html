@@ -40,16 +40,16 @@
     }
 	</style>
 	<script>
-     var container = document.getElementById( "swipearea" )
+       var container = document.getElementById( "swipearea" )
 	   var mySA = new swipeArea( "#swipearea" );
 	   mySA.swipe({
-           swipe: function(dir, act, t, delta, zoom, pos ){
+           swipe: function(dir, act, t, dx, dy, zoom, x, y ){
                container.innerHTML =
                    "Direction: " + dir + ",    " + 
                    "Action: " + act + ",    " +
                    "Time: " + t + ",    " +
-                   "(dx, dy): (" + delta[0].x + "," + delta[0].y + ")" +  ",    " +
-                   "(x, y): (" + pos[0].x + "," + pos[0].y + ")" + ",    " +
+                   "(dx, dy): (" + dx + "," + dy + ")" +  ",    " +
+                   "(x, y): (" + x + "," + y + ")" + ",    " +
                    "Zoom: " + zoom}
        });
   	</script>
